@@ -1,0 +1,49 @@
+{% extends "login_base.html" %}
+{% block title %} Login {% endblock %}
+
+{% block main %}
+<style>
+	#formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+
+  width: 100%;
+  height:100%;
+  max-width: 100%;
+
+  position: relative;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+</style>
+<div class="row">
+		<div class="wrapper fadeInDown">
+			<div id="formContent">
+				<br>
+				<h3 align="center"><span class="icon fa fa-users" aria-hidden="true"></span> Welcome Back! </h3>
+				<br>
+				<form method="post">
+					{% csrf_token %}
+					<input type="hidden" name="next" value="{{ request.path }}" />
+						{% include 'form.html' %}
+						{% if user.is_authenticated %}
+
+						<!-- <button type="submit" style="margin-left:40%;" class="btn btn-danger"><a href="/accounts/logout">Logout</a></button> -->
+						{% else %}
+						<!-- <button type="submit" style="margin-left:40%;" class="btn btn-primary"><a class="link-color" href="/accounts/login">Login</a></button> -->
+						{% endif %}
+						{% block extraheader %}{% endblock %}
+					<input type="submit" class="fadeIn fourth" value="Log In"><br>
+                    <div class="text-center"><a href="{% url 'accounts:password_reset' %}">Forgot Password?</a></div>
+					<br>
+					<div class="text-center"><a href="{% url 'accounts:signup' %}">Create Your Account</a></div>
+				</form>
+
+			</div>
+		</div>
+</div>
+{% endblock %}

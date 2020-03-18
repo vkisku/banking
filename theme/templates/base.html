@@ -1,0 +1,1050 @@
+<html lang="en">
+<head>
+    {% load static %}
+    {% load staticfiles %}
+    <title>Digital Mine (IoT) | CSIR-CIMFR</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static 'image/csir_logo.ico' %}" type="image/icon type">
+    <!-- Canonical SEO -->
+    {#    <link rel="canonical" href="https://www.creative-tim.com/product/navbar-with-icons"/>#}
+
+
+    <meta name="keywords"
+          content="csir,cimfr,central institute mining and fuel research digital, Council of Scientific and Industrial Research, digital mine, internet of things,
+           development, development of digital mine using iot, erp, digital erp, meity,ministry of electronics and information technology,government of india">
+    <meta name="description"
+          content="The main motive of this software is to digitize the manual workings of the mining industry to make it more efficient and save human lives">
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="Development of digital mine using IOT">
+    <meta itemprop="description"
+          content="We restyled the classic Bootstrap Navbar and we added brand new icons. This navbar comes with 5 vibrant colors: blue, azzure, green, orange and red.">
+    <meta itemprop="image" content="https://s3.amazonaws.com/creativetim_bucket/products/18/opt_navbar_thumbnail3.jpg">
+
+    <style>
+        .navbar.bg-primary {
+            border-radius: 0px;
+        !important;
+            background-color: #3c8e9f;;
+        !important;
+            margin-bottom: 0px;
+
+        }
+
+        .navbar {
+            border-radius: 0px;
+        !important;
+            background-color: #11758a;
+        !important;
+        }
+
+        .navbar {
+            border-radius: 0px;
+        !important;
+            background-color: #11758a;
+        !important;
+        }
+
+        .dropdown-menu.navbar-color > li > a {
+            color: #ffffff;
+            background-color: #36acdb;
+        }
+
+        .dropdown-menu.navbar-color > li > ul > li > a {
+            color: #ffffff;
+            background-color: #36acdb;
+        }
+
+        .dropdown-menu.navbar-color {
+            background-color: #38aedd;
+            opacity: 1;
+        }
+
+        .navbar-nav > li > .dropdown-menu {
+            left: auto;
+        }
+
+        ul.dropdown-menu.dropdown-menu-large.row.navbar-color > li > ul > li > a:hover {
+            background-color: whitesmoke;
+            color: black;
+            border-radius: 5px;
+
+        }
+
+
+        .wrap {
+            width: 1000px;
+            height: 1000px;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            margin-top: 10px;
+        }
+
+        body {
+            padding-top: 0px;
+            height: 100%;
+            overflow-x: visible;
+            margin: 0px;
+            font-family: 'Roboto';
+
+        }
+
+        html {
+            height: 100%;
+        }
+
+
+        @font-face {
+            font-family: "Times New Roman", Times, serif;
+            src: url('/static/fonts/thewitcher-4.ttf') format('truetype')
+        }
+
+        .KBmap__markerTitle {
+            font-family: witcher;
+            color: #56270c;
+        }
+
+        .KBmap__mapContainer {
+            height: 100vh;
+            max-height: 100vh;
+        }
+
+        .KBmap__mapHolder {
+            height: 100%;
+            box-shadow: 10px 10px 5px #aaaaaa;
+        }
+
+        .KBmap__mapHolder img {
+            width: auto;
+            height: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 150px;
+        }
+
+        .bootstrap-timepicker-widget table td input {
+            width: 40px;
+        }
+
+        .blurred-container {
+            height: 100px !important;
+        }
+
+        .blurred-container > .img-src {
+            height: 100px !important;
+        }
+
+        th:last-child,
+        td:last-child,
+        th:nth-last-child(2),
+        td:nth-last-child(2) {
+            text-align: center;
+        }
+
+    </style>
+
+    <script>
+        window.onload = function () {
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                document.location = '/mobile';
+            }
+        }
+    </script>
+
+    <!--=======end PAHLE KA===================-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"> <!--BootStrap-->
+    <link rel="stylesheet" href="{% static 'css/toastr.min.css' %}"> <!--For Showing ALert-->
+    <link rel="stylesheet" href="{% static 'css/filepond.css' %}"> <!---->
+    <link rel="stylesheet" href="{% static 'css/MaterialIcons.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static '/css/w3.css' %}">
+    <!--<link rel="stylesheet" href="{% static '/css/bootstrap-datetimepicker.css' %}">-->
+    <!--&lt;!&ndash;<link rel="stylesheet" href="{% static '/css/datepicker.css' %}">&ndash;&gt; if this is added then bootstrap-datetimepicker does not work properly-->
+    <link rel="stylesheet" href="{% static '/css/dataTable.css' %}">
+    <link rel="stylesheet" href="{% static '/css/custom_style.css' %}">
+
+    <link rel="stylesheet" href="{% static '/css/jquery.toast.css' %}">
+
+    <link rel="stylesheet" href="{% static 'tags/css/bootstrap-tagsinput.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datetimepicker.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/KBmapmarkers.css' %}">
+    <link rel="stylesheet" href="{% static '/css/dataTables.bootstrap.min.css' %}">
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <link href="{% static  'css/jquery-ui.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fonts/Roboto.css' %}" rel='stylesheet' type='text/css'>
+
+
+    <script type="text/javascript" src="{% static 'js/underscore-min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/lodash.min.js' %}"></script>
+
+    <script src="{% static 'js/customJS.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!--<script src="{% static 'js/bootstrap.js' %}"></script>-->
+    <!--<script src="{% static 'js/bootstrap-datepicker.js' %}"></script>-->
+
+    <script src="{% static 'js/dataTable.js' %}"></script>
+    <script src="{% static 'js/dataTables.buttons.min.js' %}"></script>
+    <script src="{% static 'js/buttons.flash.min.js' %}"></script>
+    <script src="{% static 'Js/jszip.min.js' %}"></script>
+    <script src="{% static 'js/pdfmake.min.js' %}"></script>
+    <script src="{% static 'js/vfs_fonts.js' %}"></script>
+    <script src="{% static 'js/buttons.html5.min.js' %}"></script>
+    <script src="{% static 'js/buttons.print.min.js' %}"></script>
+
+    <script src="{% static 'js/plotly-latest.min.js' %}"></script>
+    <script src="{% static 'js/KBmapmarkers.js' %}"></script>
+    <script src="{% static 'js/KBmapmarkersCords.js' %}"></script>
+    <script src="{% static 'js/jquery.panzoom.min.js' %}"></script>
+    <script src="{% static 'js/jquery.mousewheel.js' %}"></script>
+    <script src="{% static 'js/ObjectEquate.js' %}"></script>
+    <script src="{% static 'js/jquery.connectingLine.js' %}"></script>
+    <script src="{% static 'js/jquery.svg.min.js' %}"></script>
+    <script src="{% static 'js/jquery.md5.min.js' %}"></script>
+
+    <script src="{% static 'datetime/js/moment.js' %}"></script>
+    <script src="{% static 'datetime/js/moment-with-locales.js' %}"></script>
+    <script src="{% static 'datetime/js/collapse.js' %}"></script>
+    <script src="{% static 'datetime/js/transition.min.js' %}"></script>
+    <script src="{% static 'js/printThis.js' %}"></script>
+{#    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.9.4/cytoscape.min.js"></script>#}
+
+    <script src="{% static 'datetime/js/bootstrap-datetimepicker.min.js' %}"></script>
+{#    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>#}
+
+    <!--Tags-->
+    <link href="{% static 'css/select2.min.css' %}" rel="stylesheet"/>
+    <script src="{% static 'js/select2.min.js' %}"></script>
+    <!--Tags End-->
+
+    <!-- BootStrap Notify Includes -->
+    <script src="{% static 'js/toastr.min.js' %}"></script>
+
+    <!-- Bootstrap Notify Includes end -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet"/>
+
+    <link href="{% static 'css/pe-icon-7-stroke.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/ct-navbar.css' %}" rel="stylesheet"/>
+
+    <!--    <link href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" rel="stylesheet"/>-->
+
+    <!--     Font Awesome     -->
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <script src="{% static 'js/prettify.js' %}"></script>
+    <link href="{% static 'css/prettify.css' %}" rel="stylesheet"/>
+    <link href="{% static 'fonts/GrandHotel.css' %}" rel='stylesheet' type='text/css'>
+    <script src="{% static 'js/filepond.js' %}"></script>
+    <!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>-->
+    <!--    <script src="https://code.jquery.com/jquery-3.0.0.slim.min.js"></script>-->
+    <script src="{% static 'js/svg.min.js' %}"></script>
+    <script src="{% static 'js/workflowChart.js' %}"></script>
+    <script src="{% static 'js/divjs.js' %}"></script>
+    <script src="{% static 'js/jquery.toast.js' %}"></script>
+
+    <style>
+        .container.tim-container {
+            width: 99%;
+        }
+
+        .navbar-transparent {
+            background-color: #34ACDC;
+            background-color: rgba(52, 172, 220, 0.98);
+
+        }
+
+    </style>
+
+    <script>
+        //paste this code under the head tag or in a separate js file.
+        // Wait for window load
+        $(document).ready(function () {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");
+        });
+    </script>
+
+</head>
+<body>
+<div class="se-pre-con"></div>
+
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="navbar-full">
+    <div id="navbar">
+        <!--
+         navbar-default can be changed with navbar-ct-blue navbar-ct-azzure navbar-ct-red navbar-ct-green navbar-ct-orange
+         -->
+        <nav class="navbar navbar-ct-blue navbar-fixed-top navbar-transparent" role="navigation">
+            <div class="container tim-container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand navbar-brand-logo" href="/">
+                        <div class="logo">
+                            <img src="{% static '/image/csir_logo.svg' %}" width="60px">
+                        </div>
+                        <div class="brand" style="width:200px;"> Development of Digital Mine Using Internet of Things
+                            (IoT).
+                        </div>
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <!--                        <li><img src="{% static '/image/csir_logo.svg' %}" height="80" width="80"/></li>-->
+                        <li class="active">
+                            <a href="/">
+                                <i class="pe-7s-home"></i>
+                                <p>Home</p>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="pe-7s-users"></i>
+                                <p>Employee
+                                    <span class="caret"></span></p>
+                            </a>
+                            <ul class="dropdown-menu  navbar-color">
+                                <li><a href="{% url 'employee:add_mine' %}">Add Mine</a></li>
+                                <li><a href="{% url 'employee:manage_mine' %}">Manage Mine</a></li>
+                                <li><a href="{% url 'employee:add_mining_role' %}">Add Mining Role</a></li>
+                                <li><a href="{% url 'employee:manage_mining_role' %}">Manage Mining Role</a></li>
+                                <li><a href="{% url 'employee:employee_add' %}">Add Employee</a></li>
+                                <li><a href="{% url 'employee:employee_manage' %}">Manage Employee</a></li>
+                                <li><a href="{% url 'attendance:index' %}">Add Employee Attendance</a></li>
+                                <li><a href="{% url 'attendance:attendance_manage' %}">Manage Employee Attendance</a>
+                                </li>
+
+                                <li><a href="{% url 'Training_Rescue_Accident:index' %}">Add Employee Training
+                                    Record </a></li>
+                                <li><a href="{% url 'Training_Rescue_Accident:Training_Rescue_Accident_Manage' %}">Manage
+                                    Employee
+                                    Training Record </a></li>
+
+                                <li><a href="{% url 'Training_Rescue_Accident:Rescue_index' %}">Add Rescue Record</a>
+                                </li>
+                                <li><a href="{% url 'Training_Rescue_Accident:Rescue_Manage' %}">Manage Rescue
+                                    Record</a></li>
+
+                                <li><a href="{% url 'Training_Rescue_Accident:Accident_index' %}">Add Accident
+                                    Record</a></li>
+                                <li><a href="{% url 'Training_Rescue_Accident:Accident_Manage' %}">Manage Accident
+                                    Record</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="pe-7s-map-marker"></i>
+                                <p>Miners Tracking<span class="caret"></span></p>
+                            </a>
+                            <ul class="dropdown-menu  navbar-color">
+
+                                <li><a href="{% url 'MinersTracking:init' %}">Router Config.</a></li>
+
+                                <li><a href="{% url 'MinersTracking:live_tracking_in_tabular' %}">Tracking in
+                                    Tabular</a></li>
+                                <li><a href="{% url 'MinersTracking:all_mine_page' %}">Live Tracking</a></li>
+                                <li><a href="{% url 'MinersTracking:single_miner_page' %}">Single Miner Tracking</a>
+                                </li>
+                                <li><a href="{% url 'MinersTracking:miner_path_history_page' %}">Miner Path History</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="pe-7s-display1"></i>
+                                <p>
+                                    Environment Monitoring
+                                    <span class="caret"></span>
+                                </p>
+                            </a>
+                            <ul class="dropdown-menu  navbar-color">
+                                <li><a href="{% url 'sensor:node_add' %}">Add & Manage Wireless Node<sub></sub></a></li>
+
+                                <li><a href="{% url 'sensor:live_data_tabular' %}">Live Data in Tabular</a></li>
+                                <li><a href="{% url 'sensor:live_data_graph' %}">Live Data in Graph</a></li>
+                                <li><a href="{% url 'sensor:live_map' %}">Live Data in Map</a></li>
+
+                                <li><a href="{% url 'gasmonitoring_wifi:add_goaf_area' %}">Add Goaf Area<sub></sub></a>
+                                </li>
+                                <li><a href="{% url 'gasmonitoring_wifi:manage_goaf_area' %}">Manage Goaf
+                                    Area<sub></sub></a></li>
+                                <li><a href="{% url 'FireExp:manual_entry' %}">Fire Status and Explosibility(Manual)</a>
+                                </li>
+                                <li><a href="{% url 'FireExp:automatic_entry' %}">Fire Status and
+                                    Explosibility(Automatic)</a></li>
+                                <li><a href="{% url 'gasmonitoring_wifi:show_area' %}">Fire Status and
+                                    Explosibility(Wi-Fi)<sub></sub></a></li>
+                                <!--<li><a href="{% url 'FireExp:line_chart_gas_ratios' %}">Fire Status and Explosibility(Gas Ratio Chart)</a></li>-->
+                                <!--<li><a href="#"></a></li>-->
+                                <li><a href="{% url 'temp_monitoring:index' %}">Mine Air Analysis <span
+                                        class="label label-default">Manual Mode</span></a></li>
+                                <li><a href="{% url 'gasmonitoring:index' %}">Mine Gas Analysis <span
+                                        class="label label-default">Manual Mode</span></a></li>
+                                        <li><a href="{% url 'temp_monitoring:live_temp_data' %}">Live Temp Data </a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="pe-7s-display1"></i>
+                                <p>Strata Monitoring
+                                    <span class="caret"></span>
+                                </p>
+                            </a>
+                            <ul class="dropdown-menu  navbar-color">
+
+                                <li><a href="{% url 'Strata:convergence_add_location' %}">Add Location</a></li>
+                                <li><a href="{% url 'Strata:convergence_manage_location' %}">Manage Location</a></li>
+
+                                <li><a href="{% url 'Strata:add_sensor_in_location' %}">Add Sensor</a></li>
+                                <li><a href="{% url 'Strata:manage_sensor_in_location' %}">Manage Sensor</a></li>
+                                <li><a href="{% url 'Strata:live_data_tabular' %}">Live Data in Tabular</a></li>
+                                <li><a href="{% url 'Strata:show_sensor_graph' %}">Live Data in Graph</a></li>
+                                <li><a href="{% url 'Strata:date_range_tabular' %}">Data b/n Dates</a></li>
+                                <li><a href="{% url 'Strata:show_graph_date_range' %}">Graph b/n Dates</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="pe-7s-paint"></i>
+                                <p>
+                                    Stowing Practices
+                                    <span class="caret"></span>
+                                </p>
+                            </a>
+                            <ul class="dropdown-menu  navbar-color">
+                                <!--<li><a href="{% url 'Controlling:bulb_on_off_page' %}">Light Controlling</a></li>-->
+                                <!--<li><a href="">Fan Controlling</a></li>-->
+                                <li><a href="{% url 'water_level_monitoring:manage_water_sensor' %}">Manage Water Level
+                                    Monitoring
+                                    Sensor</a></li>
+                                <li><a href="{% url 'water_level_monitoring:live_data_water_sensor' %}">Live Water Level
+                                    Monitoring
+                                    Table</a></li>
+                                <li><a href="{% url 'water_level_monitoring:show_graph_water_sensor' %}">Show Water
+                                    Level Monitoring
+                                    Graph</a></li>
+                                <li><a href="{% url 'water_level_monitoring:water_data_bet_two_datetime' %}">Water level
+                                    between two
+                                    datetime</a></li>
+                                <li><a href="{% url 'water_level_monitoring:graph_water_data_bet_two_datetime' %}">Graph
+                                    Water level
+                                    between two datetime</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown  dropdown-large">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="pe-7s-news-paper"></i>
+                                <p>
+                                    e-Governance
+                                    <span class="caret"></span>
+                                </p>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-large row navbar-color ">
+                                <li class="col-sm-6">
+                                    <ul class="">
+                                        <li class="dropdown-header" style="color:white;"><strong>Coal Report</strong>
+                                        </li>
+                                        <li><a href="{% url 'DGMS_Forms:Manage_DGMS_CoalMine_Annual_Annexure_I' %}">Manage
+                                            Annual Report</a></li>
+                                        <li class="colorClass"><a
+                                                href="{% url 'DGMS_Forms:Manage_First_Schedule_Form_iii' %}">Manage
+                                            First
+                                            Schedule (Form III)</a></li>
+
+                                        <li><a href="{% url 'DGMS_Forms:Manage_First_Schedule_Form_V' %}">Manage First
+                                            Schedule (Form V)</a></li>
+
+                                        <li><a href="{% url 'DGMS_Forms:Manage_DGMS_CoalMine_table_A' %}">Manage
+                                            Employment
+                                            (Table A) </a></li>
+                                        <li><a href="{% url 'DGMS_Forms:Manage_DGMS_CoalMine_table_B' %}">Manage Type
+                                            and
+                                            Aggregate Horse-Power of Electrical Appartatus (Table B)</a></li>
+                                        <li><a href="{% url 'DGMS_Forms:Manage_DGMS_CoalMine_table_C' %}">Manage Type
+                                            and
+                                            Aggregate Horse Power of Machinery and Equipment (Other then Electrical
+                                            Appartus)
+                                            (Table C)</a></li>
+                                        <li><a href="{% url 'DGMS_Forms:Manage_DGMS_CoalMine_table_D' %}">Manage
+                                            Explosives, Safety Lamp, Rock Drills and Mechanical Ventilators (Table
+                                            D)</a></li>
+                                        <li><a href="{% url 'DGMS_Forms:Manage_DGMS_CoalMine_table_E' %}">Manage
+                                            Explosives,
+                                            Safty Lamps, Rock Drills and Mechanical Ventilators (Table E)</a></li>
+                                        <li><a target="" href="{% url 'DGMS_Forms:manage_extract_or_reduce_pillars' %}">Depillaring
+                                            Permission </a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="col-sm-6">
+                                    <ul>
+                                        <li class="dropdown-header" style="color:white;"><strong>Metal Report</strong>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'DGMS_Forms:Manage_DGMS_MetalliferousMines_Annual_Annexure_II' %}">Manage
+                                                Annual Report</a>
+                                        </li>
+                                        <li><a target=""
+                                               href="{% url 'DGMS_Forms:manage_metal_mine_extract_permission' %}">Extract
+                                            Permission </a></li>
+                                        <li class="dropdown-header" style="color:white;"><strong>Oil Report</strong>
+                                        </li>
+                                        <li><a href="{% url 'DGMS_Forms:Manage_DGMS_OilMines_Annual_Annexure_III' %}">Manage
+                                            Annual Report</a></li>
+                                        <li class="dropdown-header" style="color:white;"><strong>Miscellaneous
+                                            Report</strong></li>
+                                        <li><a target="_blank" href="http://peso.gov.in/index.aspx">Fill Quaterly Report
+                                            (on PESO)</a></li>
+                                        <li><a target="_blank"
+                                               href="http://approval-permission-dgms.gov.in/Login/MineUser">Permission
+                                            Application(on DGMS)</a></li>
+                                        <li><a target="" href="{% url 'DGMS_Forms:manage_development_permission' %}">Dervelopment
+                                            Permission </a></li>
+
+                                        <li><a href="{% url 'DGMS_Forms:ManageVentilation' %}">Manage Ventilation
+                                            Report </a></li>
+                                        <li>
+                                            <a href="{% url 'DGMS_Forms:manage_identification_report_of_the_problem' %}">Identification
+                                                Report of the Problem</a></li>
+
+                                        <li class="dropdown-header" style="color:white;"><strong>Send Report</strong>
+                                        </li>
+                                        <li><a target="_blank" href="{% url 'DGMS_Forms:sendMail' %}">Compose Mail</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        <li class="dropdown ">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="pe-7s-wallet "></i>
+                                <p>
+                                    Inventory Management
+                                    <span class="caret"></span>
+                                </p>
+                            </a>
+                            <ul class="dropdown-menu  navbar-color ">
+
+                                <li><a href="{% url 'inventory_management:supplier_add' %}">Add Supplier</a></li>
+                                <li><a href="{% url 'inventory_management:category_add' %}">Add Category</a></li>
+                                <li><a href="{% url 'inventory_management:product_add' %}">Add Product</a></li>
+                                <li><a href="{% url 'inventory_management:settings' %}">Add Branch</a></li>
+                                <li><a href="{% url 'inventory_management:manageAll' %}">Manage All</a></li>
+                                <li><a href="{% url 'inventory_management:outlet_viewall' %}">Reports</a></li>
+                                <li><a href="{% url 'inventory_management:inventory_reorder' %}">Add Inventory</a></li>
+                                <li><a href="{% url 'inventory_management:Inventory_deduct' %}">Deduct Inventory</a>
+                                </li>
+                                <li><a href="{% url 'inventory_management:inventory_branchdeduct' %}">Deduct Branch
+                                    Inventory</a>
+                                </li>
+                                <li><a href="{% url 'inventory_management:distribute_prod' %}">Distribute Product</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown  dropdown-large">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="pe-7s-display1"></i>
+                                <p>
+                                    Production Monitoring
+                                    <span class="caret"></span>
+                                </p>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-large row navbar-color ">
+                                <li class="col-sm-6">
+                                    <ul class="">
+                                        <li class="dropdown-header" style="color:white;">Sword of Truth</li>
+
+                                        <li><a href="{% url 'ProductionMonitoring:vehicle_add' %}">Add Vehicle</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:vehicle_manage' %}">Manage Vehicle</a>
+                                        </li>
+                                        <li><a href="{% url 'ProductionMonitoring:weighbridge_add' %}">Add
+                                            Weighbridge</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:weighbridge_manage' %}">Manage
+                                            Weighbridge</a>
+                                        </li>
+                                        <li><a href="{% url 'ProductionMonitoring:manualentry_add' %}">Add manual Entry
+                                            Of
+                                            Coal/Ore</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:report_data' %}">Report</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:container_details_add' %}">Tub
+                                            Information</a>
+                                        </li>
+                                        <!--<li><a href="{% url 'ProductionMonitoring:production_despatch_add' %}">Production Dispatch</a></li>-->
+
+                                        <li><a href="{% url 'ProductionMonitoring:production_tub_add' %}">Production
+                                            Using
+                                            Tub</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:report_production_dispatch' %}">Report
+                                            Of
+                                            Production(coal/ore) using Tub</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:production_wastematerial_add' %}">Production
+                                            Using Waste
+                                            Material</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:production_dailyentry_add' %}">Daily
+                                            Entry of
+                                            coal/ore</a>
+                                        </li>
+                                        <li><a href="{% url 'ProductionMonitoring:production_monthly_add' %}">Monthly
+                                            Entry of
+                                            coal/ore</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="col-sm-6">
+                                    <ul class="navbar-color">
+                                        <li><a href="{% url 'ProductionMonitoring:production_yearlyentry_add' %}">Yearly
+                                            Entry of coal/ore</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:production_dailydispatch_add' %}">Daily
+                                            Dispatch of coal/ore</a></li>
+
+                                        <li><a href="{% url 'ProductionMonitoring:production_monthlydispatch_add' %}">Monthly
+                                            Dispatch of
+                                            coal/ore</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:production_yearlydispatch_add' %}">Yearly
+                                            Dispatch of
+                                            coal/ore</a></li>
+
+                                        <li><a href="{% url 'ProductionMonitoring:report_dailyentry' %}">Daily Entry
+                                            Report</a>
+                                        </li>
+                                        <li><a href="{% url 'ProductionMonitoring:report_monthlyentry' %}">Monthly Entry
+                                            Report</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:report_yearlyentry' %}">Yearly Entry
+                                            Report</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:report_dailydispatch' %}">Daily
+                                            Dispatch
+                                            Report</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:report_monthlydispatch' %}">Monthly
+                                            Dispatch
+                                            Report</a>
+                                        </li>
+                                        <li><a href="{% url 'ProductionMonitoring:report_yearlydispatch' %}">Yearly
+                                            Dispatch
+                                            Report</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:report_dailyprod_dispatch' %}">Daily
+                                            Production Dispatch Report</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:live_video_ip' %}">Video
+                                            Streaming(IP:192.168.1.250)</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:live_video_ip_151' %}">Video
+                                            Streaming(IP:192.168.1.251)</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:live_video_webcam' %}">Video
+                                            Streaming(Web Cam)</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <!--Weather Monitoring-->
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="pe-7s-display1"></i>
+                                <p>
+                                    Weather Monitoring
+                                    <span class="caret"></span>
+                                </p>
+                            </a>
+                            <ul class="dropdown-menu navbar-color ">
+
+                                <li class="dropdown-header" style="color:white;">Sensor Management</li>
+
+                                <li><a href="{% url 'wm_test:setting' %}">Setting</a></li>
+                                <li><a href="{% url 'wm_test:add_sensor' %}">Add Sensor</a></li>
+                                <li><a href="{% url 'wm_test:manage_sensor' %}">Manage Sensor</a></li>
+
+                                <li class="dropdown-header" style="color:white;">Customise Report</li>
+                                <li><a href="{% url 'wm_test:live_report' %}">Live Report</a></li>
+                                <li><a href="{% url 'wm_test:sensor_hourly_report' %}">Sensor Hourly Report</a></li>
+                                <li><a href="{% url 'wm_test:hour_duration_avg_report' %}">Hour Duration Avg Report</a>
+                                </li>
+                                <li><a href="{% url 'wm_test:date_and_hour_duration_avg_report' %}">Date And Hour
+                                    Duration Avg Report</a></li>
+
+                                <li class="dropdown-header" style="color:white;">Wind Rose</li>
+                                <li><a href="{% url 'wm_test:live_report' %}">Live Report</a></li>
+                                <li><a href="{% url 'wm_test:wind_hourly_report' %}">Wind Hourly Report</a></li>
+                                <li><a href="{% url 'wm_test:frequency_distribution_count_report' %}">Frequency
+                                    Distribution Report<span class="label label-default">Count</span></a></li>
+                                <li><a href="{% url 'wm_test:frequency_distribution_normalized_report' %}">Frequency
+                                    Distribution Report<span class="label label-default">Normalised</span></a></li>
+
+                                </li>
+                            </ul>
+                        </li>
+                        <!--Weather Monitoring End-->
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="pe-7s-more"></i>
+                                <p>More<b class="caret"></b></p>
+                            </a>
+                            <ul class="dropdown-menu  navbar-color">
+                                <li><a href="{% url 'employee:aboutus' %}">About Us</a></li>
+                                <li><a href="{% url 'employee:aboutiot' %}">About IoT</a></li>
+                                <li><a href="{% url 'employee:aboutdigitalmine' %}">About Digital Mine</a></li>
+                                <li><a href="{% url 'employee:contactus' %}">Contact Us</a></li>
+                                <li><a href="{% url 'news:index' %}">News</a></li>
+                            </ul>
+                        </li>
+
+                        <ul class="nav navbar-nav">
+                            {% if user.is_authenticated %}
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="pe-7s-user"> <span class="label incomplete_profile_check hidden">Update Profile</span></i>
+
+                                        <p>Welcome! {{ user.username }}<b class="caret"></b></p>
+                                    </a>
+
+                                    <ul class="dropdown-menu navbar-color" role="menu">
+                                        <li class="divider"></li>
+                                        <li class="text-center"><img src="" id="profile_avatar"
+                                                                     onerror="this.onerror=null;this.src='/media/employee_image/male_alt_photo.svg';"
+                                                                     width="100px" height="100px"
+                                                                     class="avatar img-circle"></li>
+                                        <li class="text-center profile-usertitle-job" style="color:white;"
+                                            id="mine_name">Hello World
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="{% url 'dashboard:dashboard_calling' %}"><span
+                                                class="glyphicon glyphicon-dashboard"></span>
+                                            Dashboard</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="/accounts/profile/overview/"><span
+                                                class="glyphicon glyphicon-th"></span>
+                                            Profile</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="/accounts/password_change/"><span
+                                                class="glyphicon glyphicon-refresh"></span>
+                                            Change Password </a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span>
+                                            Logout </a></li>
+                                    </ul>
+                                </li>
+                            {% endif %}
+                        </ul>
+
+                    </ul>
+
+
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="blurred-container"></div>
+    </div> <!-- end menu-dropdown -->
+</div>
+
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8" id="is_visiable" style="display:none">
+        <div class="alert alert-danger fade in alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+            <strong>Warning !!!</strong>
+            <hr/>
+            <div id="fill_here"></div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<div class="row" style="display:none;">
+    <iframe id="myframe"></iframe>
+</div>
+<div class="main">
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div><!-- content -->
+</div>
+<div class="modal fade" style="position:absolute" id="update_info" role="dialog">
+    <div class="modal-dialog modal-confirm ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="material-icons">&#xE5CD;</i>
+                </div>
+                <h4 class="modal-title">Are you sure?</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Do you really want to delete these records? This process cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <a id="sureDelete">
+                    <button type="button" class="btn btn-danger" id="delete">Yes</button>
+                </a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="/accounts/logout">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        $('ul.nav li.dropdown').hover(function () {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+        }, function () {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+        });
+
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": true,
+            "progressBar": false,
+            "positionClass": "toast-bottom-full-width",
+            "preventDuplicates": true,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "100",
+            "timeOut": "3000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut",
+        };
+
+        $('ul.nav li.dropdown').hover(function () {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+        }, function () {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+        });
+
+
+        $('ul.nav li.dropdown').hover(function () {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+        }, function () {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+        });
+
+        $.ajax({
+            url: "{% url 'employee:checkifuserfieldempty' %}",
+            success: function (data) {
+                if (data.result == '1') {
+                    $('span.label.incomplete_profile_check').addClass('show').removeClass('hidden');
+                } else {
+                    $('span.label.incomplete_profile_check').addClass('hidden').removeClass('show');
+                }
+            },
+            error: function () {
+                console.log('Something Went Wrong!');
+            }
+        });
+
+        $.ajax({
+            url: "{% url 'employee:profile_ajax' %}",
+            success: function (data) {
+                if (data.hasOwnProperty('profile_avatar')) {
+                    if(!isEmpty(data.profile_avatar)) {
+                        $('img#profile_avatar').attr('src', '/media/' + data.profile_avatar);
+                    }
+                    else{
+                        $('img#profile_avatar').attr('src', 'http://localhost:8000/media/employee_image/male_alt_photo.svg');
+                    }
+
+                }
+                if (data.hasOwnProperty('mine')) {
+
+                    $('li#mine_name').html(data.mine.substring(data.mine.indexOf('(') + 1, data.mine.indexOf(')')));
+                }
+            },
+            error: function () {
+                console.log('Something Went Wrong!');
+                $('img#profile_avatar').attr('src', 'http://localhost:8000/media/employee_image/male_alt_photo.svg');
+            }
+        });
+    });
+    <!-- --------------------------Global warning for STRATA, Water and gas Monitoring (Start Here)----------------- -->
+    var interval_time = 5000;
+    var myVar = setInterval(startGlobalWarningFunction, interval_time);
+
+    function startGlobalWarningFunction() {
+        $.ajax({
+            type:"GET",
+                url: "{% url 'setting:globalWarningFunction' %}",
+                success: function(data) {
+                    console.log(data);
+                    switchingWarningFunction(data);
+                },
+                error: function(){
+                        console.log("Something went wrong. Please contact admin");
+                }
+        });
+    }
+
+    {#setInterval(function(){#}
+    {#    $.ajax({#}
+    {#        type:"get",#}
+    {#            url: "{% url 'Strata:warning_level_information' %}",#}
+    {#            success: function(data) {#}
+    {#            //console.log(data);#}
+    {#            //toastr.warning(data["result"]); // Vikash Changed Here#}
+    {#            //$("#fill_here").html(data["result"]); //Vikash Changed Here#}
+    {#            if(data["result"]){#}
+    {#               // $("#is_visiable").attr("style",""); //Vikash Changed Here#}
+    {#                toastr.warning(data["result"]);#}
+    {#                if(data["light_result"]){#}
+    {#                    $("#myframe").attr("src", "http://192.168.1.227/LEDOn2");#}
+    {#                }else{#}
+    {#                    $("#myframe").attr("src", "http://192.168.1.227/LEDOff2");#}
+    {#                }#}
+    {#            }else{#}
+    {#                $("#is_visiable").attr("style","display:none");#}
+    {#                $("#myframe").attr("src", "http://192.168.1.227/LEDOff2");#}
+    {#            }#}
+    {#            },#}
+    {#            error: function(){#}
+    {#                    console.log("something went wrong");#}
+    {#            }#}
+    {#    });#}
+    {#, interval_time);#}
+
+    function stopGlobalWarningFunction() {
+        clearInterval(myVar);
+    }
+    var total_row = 0;
+    function switchingWarningFunction(json) {
+
+         var tbl = "<table style='border-collapse: collapse;\n" +
+             "  border-spacing: 0;\n" +
+             "  width: 100%;\n" +
+             "  border: 0px solid #ddd;'>" +
+             "<head>" +
+             "<tr>" +
+             "<th>Date-Time</th>" +
+             "<th>Location" +
+             "</th>" +
+             "<th>Sensor Name/Type</th>" +
+             "<th>Warning Level</th>" +
+             "<th>Sensor Value</th>" +
+             "</head>" +
+             "<body>";
+
+
+        json.forEach(function(objArray) {
+            objArray.forEach(function(obj) {
+
+                switch (obj.module_type) {
+                    case "strata":
+                        tbl += strataWarningFunction(obj);
+                        break;
+                    case "water":
+                        tbl += waterWarningFunction(obj);
+                        break;
+                    default:
+                        break;
+                }
+            });
+        });
+        tbl += "</body>" +
+             "</table>";
+
+        if(total_row){
+            toastr.warning(tbl);
+        }
+    }
+
+    function strataWarningFunction(json) {
+        var popup_tbl = "";
+        if(json.is_strata_display_warning){
+            total_row++;
+            popup_tbl = "<tr>" +
+                        "<td>"+json.datetime+"</td>" +
+                        "<td>"+json.location+"</td>" +
+                        "<td>"+json.sensor_name+"</td>" +
+                        "<td>"+json.warning_level+"</td>" +
+                        "<td>"+json.value+"</td>" +
+                        "</tr>";
+        }
+        if(json.is_strata_audio){
+             if(json.audio_play_type =="text2voice"){
+                Speak(json.audio_text,9,0.5);
+            }else{
+                path = baseUrl+json.audio_song;
+                var playNow = new Audio(path);
+                playNow.play();
+            }
+        }
+        if (json.is_strata_light){
+
+        }
+
+        return popup_tbl;
+    }
+    function waterWarningFunction(json) {
+        var popup_tbl = "";
+        if(json.is_water_display_warning){
+            total_row++;
+           popup_tbl =  "<tr>" +
+                        "<td>"+json.datetime+"</td>" +
+                        "<td>"+json.location+"</td>" +
+                        "<td>"+json.sensor_name+"</td>" +
+                        "<td>"+json.warning_level+"</td>" +
+                        "<td>"+json.value+"</td>" +
+                        "</tr>";
+        }
+        if(json.is_water_audio){
+            if(json.audio_play_type =="text2voice"){
+                Speak(json.audio_text,9,0.5);
+            }else{
+                path = baseUrl+json.audio_song;
+                var playNow = new Audio(path);
+                playNow.play();
+            }
+        }
+        return popup_tbl;
+    }
+    <!-- --------- Global warning for STRATA, Water and gas Monitoring (End Here)-----------------------------------  -->
+</script>
+<script src="{% static 'js/ct-navbar.js' %}"></script>
+<!--<script src="https://code.responsivevoice.org/responsivevoice.js?key=vDqCD9pp"></script>-->
+</body>
+</html>

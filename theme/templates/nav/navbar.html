@@ -1,0 +1,389 @@
+{% block navbar %}
+<div id="navbar-full">
+    <div id="navbar">
+
+        <!--
+         navbar-default can be changed with navbar-ct-blue navbar-ct-azzure navbar-ct-red navbar-ct-green navbar-ct-orange
+         -->
+        <nav class="navbar navbar-ct-blue navbar-fixed-top navbar-transparent" role="navigation">
+
+            <div class="container tim-container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand navbar-brand-logo" href="/">
+                        <div class="logo">
+                            <img src="{% static '/image/csir_logo.svg' %}" width="60px">
+                        </div>
+                        <div class="brand" style="width:200px;"> Development of Digital Mine Using Internet of Things
+                            (IoT).
+                        </div>
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+<!--                        <li><img src="{% static '/image/csir_logo.svg' %}" height="80" width="80"/></li>-->
+                        <li class="active">
+                          <a  href="/">
+                                <i class="pe-7s-home"></i>
+                                <p>Home</p>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="pe-7s-users"></i>
+                                <p>Employee
+                                <span class="caret"></span></p>
+                            </a>
+
+                            <ul class="dropdown-menu  navbar-color">
+                                <li><a href="{% url 'employee:add_mine' %}">Add Mine</a></li>
+                                <li><a href="{% url 'employee:manage_mine' %}">Manage Mine</a></li>
+                                <li><a href="{% url 'employee:add_mining_role' %}">Add Mining Role</a></li>
+                                <li><a href="{% url 'employee:manage_mining_role' %}">Manage Mining Role</a></li>
+
+                                <li><a href="{% url 'employee:employee_add' %}">Add Employee</a></li>
+                                <li><a href="{% url 'employee:employee_manage' %}">Manage Employee</a></li>
+                                <li><a href="{% url 'attendance:index' %}">Add Employee Attendance</a></li>
+                                <li><a href="{% url 'attendance:attendance_manage' %}">Manage Employee Attendance</a>
+                                </li>
+
+                                <li><a href="{% url 'Training_Rescue_Accident:index' %}">Add Employee Training
+                                    Record </a></li>
+                                <li><a href="{% url 'Training_Rescue_Accident:Training_Rescue_Accident_Manage' %}">Manage
+                                    Employee
+                                    Training Record </a></li>
+
+                                <li><a href="{% url 'Training_Rescue_Accident:Rescue_index' %}">Add Rescue Record</a>
+                                </li>
+                                <li><a href="{% url 'Training_Rescue_Accident:Rescue_Manage' %}">Manage Rescue
+                                    Record</a></li>
+
+                                <li><a href="{% url 'Training_Rescue_Accident:Accident_index' %}">Add Accident
+                                    Record</a></li>
+                                <li><a href="{% url 'Training_Rescue_Accident:Accident_Manage' %}">Manage Accident
+                                    Record</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="pe-7s-map-marker"></i>
+                                <p>
+                                    Miners Tracking
+                                   <span class="caret"></span>
+                                </p>
+                            </a>
+                            <ul class="dropdown-menu  navbar-color">
+
+                                <li><a href="{% url 'MinersTracking:init' %}">Router Config.</a></li>
+
+                                <li><a href="{% url 'MinersTracking:live_tracking_in_tabular' %}">Tracking in
+                                    Tabular</a></li>
+                                <li><a href="{% url 'MinersTracking:all_mine_page' %}">Live Tracking</a></li>
+                                <li><a href="{% url 'MinersTracking:single_miner_page' %}">Single Miner Tracking</a>
+                                </li>
+                                <li><a href="{% url 'MinersTracking:miner_path_history_page' %}">Miner Path History</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="pe-7s-display1"></i>
+                                <p>
+                                    Environment Monitoring
+                                    <span class="caret"></span>
+                                </p>
+                            </a>
+                            <ul class="dropdown-menu  navbar-color">
+                                <li><a href="{% url 'sensor:node_add' %}">Add & Manage Wireless Node<sub></sub></a></li>
+
+                                <li><a href="{% url 'sensor:live_data_tabular'%}">Live Data in Tabular</a></li>
+                                <li><a href="{% url 'sensor:live_data_graph'%}">Live Data in Graph</a></li>
+                                <li><a href="{% url 'sensor:live_map'%}">Live Data in Map</a></li>
+
+                                <li><a href="{% url 'gasmonitoring_wifi:add_goaf_area' %}">Add Goaf Area<sub></sub></a>
+                                </li>
+                                <li><a href="{% url 'gasmonitoring_wifi:manage_goaf_area' %}">Manage Goaf
+                                    Area<sub></sub></a></li>
+                                <li><a href="{% url 'FireExp:manual_entry' %}">Fire Status and Explosibility(Manual)</a>
+                                </li>
+                                <li><a href="{% url 'FireExp:automatic_entry' %}">Fire Status and
+                                    Explosibility(Automatic)</a></li>
+                                <li><a href="{% url 'gasmonitoring_wifi:show_area' %}">Fire Status and
+                                    Explosibility(Wi-Fi)<sub></sub></a></li>
+                                <!--<li><a href="{% url 'FireExp:line_chart_gas_ratios' %}">Fire Status and Explosibility(Gas Ratio Chart)</a></li>-->
+                                <!--<li><a href="#"></a></li>-->
+                                <li><a href="{% url 'temp_monitoring:index' %}">Mine Air Analysis <span
+                                        class="label label-default">Manual Mode</span></a>
+                                </li>
+                                <li><a href="{% url 'gasmonitoring:index' %}">Mine Gas Analysis <span
+                                        class="label label-default">Manual Mode</span></a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                 <i class="pe-7s-display1"></i>
+                                <p>Strata Monitoring
+                                    <span class="caret"></span>
+                                </p>
+                            </a>
+                            <ul class="dropdown-menu  navbar-color">
+
+                                <li><a href="{% url 'Strata:convergence_add_location' %}">Add Location</a></li>
+                                <li><a href="{% url 'Strata:convergence_manage_location' %}">Manage Location</a></li>
+
+                                <li><a href="{% url 'Strata:add_sensor_in_location' %}">Add Sensor</a></li>
+                                <li><a href="{% url 'Strata:manage_sensor_in_location' %}">Manage Sensor</a></li>
+                                <li><a href="{% url 'Strata:live_data_tabular' %}">Live Data in Tabular</a></li>
+                                <li><a href="{% url 'Strata:show_sensor_graph' %}">Live Data in Graph</a></li>
+                                <li><a href="{% url 'Strata:date_range_tabular' %}">Data b/n Dates</a></li>
+                                <li><a href="{% url 'Strata:show_graph_date_range' %}">Graph b/n Dates</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="pe-7s-paint"></i>
+                                <p>
+                                    Stowing Practices
+                                    <span class="caret"></span>
+                                </p>
+                            </a>
+                            <ul class="dropdown-menu  navbar-color">
+                                <!--<li><a href="{% url 'Controlling:bulb_on_off_page' %}">Light Controlling</a></li>-->
+                                <!--<li><a href="">Fan Controlling</a></li>-->
+                                <li><a href="{% url 'water_level_monitoring:manage_water_sensor' %}">Manage Water Level
+                                    Monitoring
+                                    Sensor</a></li>
+                                <li><a href="{% url 'water_level_monitoring:live_data_water_sensor' %}">Live Water Level
+                                    Monitoring
+                                    Table</a></li>
+                                <li><a href="{% url 'water_level_monitoring:show_graph_water_sensor' %}">Show Water
+                                    Level Monitoring
+                                    Graph</a></li>
+                                <li><a href="{% url 'water_level_monitoring:water_data_bet_two_datetime' %}">Water level
+                                    between two
+                                    datetime</a></li>
+                                <li><a href="{% url 'water_level_monitoring:graph_water_data_bet_two_datetime' %}">Graph
+                                    Water level
+                                    between two datetime</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="pe-7s-news-paper"></i>
+                                <p>
+                                    DGMS
+                                    <span class="caret"></span>
+                                </p>
+                            </a>
+                            <ul class="dropdown-menu  navbar-color">
+                                <li><a href="{% url 'DGMS_Forms:Manage_DGMS_CoalMine_Annual_Annexure_I' %}">Manage
+                                    Annual Annexure I
+                                    (Coal Mine)</a></li>
+                                <li><a href="{% url 'DGMS_Forms:Manage_First_Schedule_Form_iii' %}">Manage First
+                                    Schedule Form
+                                    III </a></li>
+                                <li><a href="{% url 'DGMS_Forms:Manage_DGMS_CoalMine_table_A' %}">Manage Coal Mine Table
+                                    A </a></li>
+                                <li><a href="{% url 'DGMS_Forms:Manage_DGMS_CoalMine_table_B' %}">Manage Coal Mine Table
+                                    B</a></li>
+                                <li><a href="{% url 'DGMS_Forms:Manage_DGMS_CoalMine_table_C' %}">Manage Coal Mine Table
+                                    C</a></li>
+                                <li><a href="{% url 'DGMS_Forms:Manage_DGMS_CoalMine_table_D' %}">Manage Coal Mine Table
+                                    D</a></li>
+                                <li><a href="{% url 'DGMS_Forms:Manage_DGMS_CoalMine_table_E' %}">Manage Coal Mine Table
+                                    E</a></li>
+                                <li><a href="{% url 'DGMS_Forms:Manage_DGMS_MetalliferousMines_Annual_Annexure_II' %}">Manage
+                                    Annual
+                                    Annexure II (Metalliferous Mines)</a></li>
+                                <li><a href="{% url 'DGMS_Forms:Manage_DGMS_OilMines_Annual_Annexure_III' %}">Manage
+                                    Annual Annexure
+                                    III (Oil Mines)</a></li>
+                                <li><a target="_blank" href="http://peso.gov.in/index.aspx">Fill Quaterly Annual
+                                    Report</a></li>
+                                <li><a target="_blank" href="{% url 'DGMS_Forms:sendMail' %}">Compose Mail</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown ">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="pe-7s-wallet "></i>
+                               <p>
+                                   Inventory Management
+                                   <span class="caret"></span>
+                               </p>
+                            </a>
+                            <ul class="dropdown-menu  navbar-color ">
+
+                                <li><a href="{% url 'inventory_management:supplier_add' %}">Add Supplier</a></li>
+                                <li><a href="{% url 'inventory_management:category_add' %}">Add Category</a></li>
+                                <li><a href="{% url 'inventory_management:product_add' %}">Add Product</a></li>
+                                <li><a href="{% url 'inventory_management:settings' %}">Add Branch</a></li>
+                                <li><a href="{% url 'inventory_management:manageAll' %}">Manage All</a></li>
+                                <li><a href="{% url 'inventory_management:outlet_viewall' %}">Reports</a></li>
+                                <li><a href="{% url 'inventory_management:inventory_reorder' %}">Add Inventory</a></li>
+                                <li><a href="{% url 'inventory_management:Inventory_deduct' %}">Deduct Inventory</a>
+                                </li>
+                                <li><a href="{% url 'inventory_management:inventory_branchdeduct' %}">Deduct Branch
+                                    Inventory</a>
+                                </li>
+                                <li><a href="{% url 'inventory_management:distribute_prod' %}">Distribute Product</a>
+                                </li>
+                                    </ul>
+                        </li>
+
+                        <li class="dropdown  dropdown-large">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                 <i class="pe-7s-display1"></i>
+                                <p>
+                                    Production Monitoring
+                                    <span class="caret"></span>
+                                </p>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-large row navbar-color">
+                                <li class="col-sm-6">
+						            <ul>
+                                        <li class="dropdown-header" style="color:white;">Sword of Truth</li>
+
+                                        <li><a href="{% url 'ProductionMonitoring:vehicle_add' %}">Add Vehicle</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:vehicle_manage' %}">Manage Vehicle</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:weighbridge_add' %}">Add Weighbridge</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:weighbridge_manage' %}">Manage Weighbridge</a>
+                                        </li>
+                                        <li><a href="{% url 'ProductionMonitoring:manualentry_add' %}">Add manual Entry Of
+                                            Coal/Ore</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:report_data' %}">Report</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:container_details_add' %}">Tub Information</a>
+                                        </li>
+                                        <!--<li><a href="{% url 'ProductionMonitoring:production_despatch_add' %}">Production Dispatch</a></li>-->
+
+                                        <li><a href="{% url 'ProductionMonitoring:production_tub_add' %}">Production Using
+                                            Tub</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:report_production_dispatch' %}">Report Of
+                                            Production(coal/ore) using Tub</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:production_wastematerial_add' %}">Production
+                                            Using Waste
+                                            Material</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:production_dailyentry_add' %}">Daily Entry of
+                                            coal/ore</a>
+                                        </li>
+                                        <li><a href="{% url 'ProductionMonitoring:production_monthly_add' %}">Monthly Entry of
+                                            coal/ore</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="col-sm-6">
+						            <ul>
+                                        <li><a href="{% url 'ProductionMonitoring:production_yearlyentry_add' %}">Yearly Entry
+                                            of
+                                            coal/ore</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:production_dailydispatch_add' %}">Daily
+                                            Dispatch of
+                                            coal/ore</a></li>
+
+                                        <li><a href="{% url 'ProductionMonitoring:production_monthlydispatch_add' %}">Monthly
+                                            Dispatch of
+                                            coal/ore</a></li>
+
+                                        <li><a href="{% url 'ProductionMonitoring:production_yearlydispatch_add' %}">Yearly
+                                            Dispatch of
+                                            coal/ore</a></li>
+
+                                        <li><a href="{% url 'ProductionMonitoring:report_dailyentry' %}">Daily Entry Report</a>
+                                        </li>
+                                        <li><a href="{% url 'ProductionMonitoring:report_monthlyentry' %}">Monthly Entry
+                                            Report</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:report_yearlyentry' %}">Yearly Entry
+                                            Report</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:report_dailydispatch' %}">Daily Dispatch
+                                            Report</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:report_monthlydispatch' %}">Monthly Dispatch
+                                            Report</a>
+                                        </li>
+                                        <li><a href="{% url 'ProductionMonitoring:report_yearlydispatch' %}">Yearly Dispatch
+                                            Report</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:report_dailyprod_dispatch' %}">Daily
+                                            Production Dispatch
+                                            Report</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:live_video_ip' %}">Video
+                                            Streaming(IP:192.168.1.250)</a>
+                                        </li>
+                                        <li><a href="{% url 'ProductionMonitoring:live_video_ip_151' %}">Video
+                                            Streaming(IP:192.168.1.251)</a></li>
+                                        <li><a href="{% url 'ProductionMonitoring:live_video_webcam' %}">Video Streaming(Web
+                                            Cam)</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="pe-7s-more"></i>
+                                <p>More<b class="caret"></b></p>
+                            </a>
+                            <ul class="dropdown-menu  navbar-color">
+                                <li><a href="{% url 'employee:aboutus' %}">About Us</a></li>
+                                <li><a href="{% url 'employee:aboutiot' %}">About IoT</a></li>
+                                <li><a href="{% url 'employee:aboutdigitalmine' %}">About Digital Mine</a></li>
+                                <li><a href="{% url 'employee:contactus' %}">Contact Us</a></li>
+                                <li><a href="{% url 'news:index' %}">News</a></li>
+                            </ul>
+                        </li>
+
+
+                        <ul class="nav navbar-nav">
+                            {% if user.is_authenticated %}
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="pe-7s-user"> <span class="label incomplete_profile_check hidden">Update Profile</span></i>
+
+                                    <p>Welcome! {{user.username }}<b class="caret"></b></p>
+                                </a>
+
+                                <ul class="dropdown-menu navbar-color" role="menu">
+                                   <li class="divider"></li>
+                                <li class="text-center"><img src="" id="profile_avatar" width="100px" height="100px" class="avatar img-circle"></li>
+                                <li class="divider"></li>
+                                    <li><a href="/accounts/profile/"><span class="glyphicon glyphicon-dashboard"></span>
+                                        Dashboard</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/accounts/profile/overview/"><span class="glyphicon glyphicon-th"></span>
+                                        Profile</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/accounts/password_change/"><span
+                                            class="glyphicon glyphicon-refresh"></span>
+                                        Change Password </a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/accounts/logout"><span
+                                            class="glyphicon glyphicon-off"></span>
+                                        Logout </a></li>
+                                </ul>
+                            </li>
+                            {% endif %}
+                        </ul>
+
+                    </ul>
+
+
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="blurred-container">
+
+        </div>
+
+    </div> <!-- end menu-dropdown -->
+</div>
+{% endblock %}

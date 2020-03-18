@@ -1,0 +1,284 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load staticfiles %}
+<div class="container">
+    <h1>Edit Profile</h1>
+    <hr>
+    <div class="row">
+        <form class="" method="post" action="" role="form" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="row profile">
+                <div class="col-md-3">
+                    <div class="profile-sidebar">
+                        <!-- SIDEBAR USERPIC -->
+                        <div class="">
+                            <div class="text-center">
+
+                                <img src="" id="profile_avatar_view" onerror="this.onerror=null;this.src='/media/employee_image/male_alt_photo.svg';"  height="150px" width="150px"
+                                     class="avatar img-circle filepond" alt="avatar">
+
+                                <label for="id_profile_avatar" class="id_profile_avatar">
+                                    <i for="id_profile_avatar" class="fa fa-camera example" id="example"
+                                       aria-hidden="true"></i>
+                                </label>
+                                <!--            <h6>Upload a different photo...</h6>-->
+
+                                <div id="CurrentPhotoCheck">
+                                    {{form_extension.profile_avatar}}
+                                    <!--<input id="file-upload" type="file"/>-->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END SIDEBAR USERPIC -->
+                        <!-- SIDEBAR USER TITLE -->
+                        <div class="profile-usertitle">
+                            <div class="profile-usertitle-name text-center">{{form.first_name.value|default_if_none:""}} {{form.last_name.value|default_if_none:""}}
+                            </div>
+                            <div class="profile-usertitle-job">
+                                DIGITAL MINER
+                            </div>
+                        </div>
+
+                        <div class="profile-usermenu">
+                            <ul class="nav">
+                                <li class="{{active.overview}}">
+                                    <a href="../overview/">
+                                        <i class="glyphicon glyphicon-home"></i>
+                                        Overview </a>
+                                </li>
+                                <li class="{{active.setting}}">
+                                    <a href="../setting/">
+                                        <i class="glyphicon glyphicon-user"></i>
+                                        Account Settings </a>
+                                </li>
+                                <li class="{{active.tasks}}">
+                                    <a href="../tasks/">
+                                        <i class="glyphicon glyphicon-ok"></i>
+                                        Tasks </a>
+                                </li>
+                                <li class="{{active.help}}">
+                                    <a href="../help/">
+                                        <i class="glyphicon glyphicon-flag"></i>
+                                        Help </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- END MENU -->
+                    </div>
+                </div>
+                <div class="col-md-9">
+
+                    {% ifequal active.overview "active" %}
+                    <div class="profile-content">
+                        <!-- edit form column -->
+                        <div class="form-horizontal">
+                            <div class="col-md-9 personal-info">
+                                <div class="alert alert-info alert-dismissable" style="box-shadow:10px 10px 5px #aaaaaa;">
+                                    <a class="panel-close close" data-dismiss="alert">×</a>
+                                    <i class="fa fa-coffee"></i>
+                                    This is an <strong>.alert</strong>. Use this to show important messages to the user.
+                                </div>
+                                <h3>Personal info</h3>
+                                {% if form.errors %}
+                                {% for field in form %}
+                                {% for error in field.errors %}
+                                <div class="alert alert-danger">
+                                    <strong>{{ error|escape }}</strong>
+                                </div>
+                                {% endfor %}
+                                {% endfor %}
+                                {% for error in form.non_field_errors %}
+                                <div class="alert alert-danger">
+                                    <strong>{{ error|escape }}</strong>
+                                </div>
+                                {% endfor %}
+                                {% endif %}
+
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">User Name:</label>
+                                    <div class="col-lg-8">
+
+
+                                        <!--              <input class="form-control" type="text" value="Jane">-->
+                                        {{form.username}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">First name:</label>
+                                    <div class="col-lg-8">
+                                        <!--              <input class="form-control" type="text" value="Jane">-->
+                                        {{form.first_name}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Last name:</label>
+                                    <div class="col-lg-8">
+                                        <!--              <input class="form-control" type="text" value="Bishop">-->
+                                        {{form.last_name}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Email:</label>
+                                    <div class="col-lg-8">
+                                        <!--              <input class="form-control" type="text" value="Bishop">-->
+                                        {{form.email}}
+                                        <span style="color:red">{{form.email.errors|striptags}}</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Date Joined:</label>
+                                    <div class="col-lg-8">
+                                        <!--              <input class="form-control" type="text" value="">-->
+                                        {{form.date_joined}}
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label"></label>
+                                    <div class="col-md-8 text-center">
+
+                                        <input type="submit" class="btn btn-primary" value="Save Changes">
+                                        <span></span>
+                                        <!--              <input type="reset" class="btn btn-default" value="Cancel">-->
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    {% endifequal %}
+
+                    {% ifequal active.setting "active" %}
+                    <div class="profile-content">
+                        <!-- edit form column -->
+                        <div class="form-horizontal">
+                            <div class="col-md-9 personal-info">
+                                <div class="alert alert-info alert-dismissable" style="box-shadow:10px 10px 5px #aaaaaa;">
+                                    <a class="panel-close close" data-dismiss="alert">×</a>
+                                    <i class="fa fa-coffee"></i>
+                                    This is an <strong>.alert</strong>. Use this to show important messages to the user.
+                                </div>
+                                <h3>Change Password</h3>
+                                <div class="form-group">
+                                    {{form.old_password.errors|escape}}
+                                    <label class="col-lg-3 control-label">Old Password:</label>
+                                    <div class="col-lg-8">
+
+
+                                        <!--              <input class="form-control" type="text" value="Jane">-->
+                                        {{form.old_password}}
+                                        <span>{{form.old_password.errors}}</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    {{form.new_password1.errors}}
+                                    <label class="col-lg-3 control-label">New Password:</label>
+
+                                    <div class="col-lg-8">
+                                        <!--              <input class="form-control" type="text" value="Jane">-->
+                                        {{form.new_password1}}
+
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    {{form.new_password2.errors}}
+                                    <label class="col-lg-3 control-label">Confirm Password:</label>
+                                    <div class="col-lg-8">
+                                        <!--              <input class="form-control" type="text" value="Bishop">-->
+                                       {{form.new_password2}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label"></label>
+                                    <div class="col-md-8 text-center">
+
+                                        <input type="submit" class="btn btn-primary" value="Save Changes">
+                                        <span></span>
+                                        <!--              <input type="reset" class="btn btn-default" value="Cancel">-->
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    {% endifequal %}
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+    </div>
+</div>
+
+<hr>
+
+<script>
+    function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#profile_avatar_view').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#id_profile_avatar").change(function(){
+    readURL(this);console.log(this);
+});
+
+
+  $( "#CurrentPhotoCheck" ).has( "a" ).children('a').attr('id','CurrentPhotoCheckOnHover')
+   $( "#CurrentPhotoCheck" ).addClass('hide');
+  $('#profile_avatar_view').attr('src',$('#CurrentPhotoCheckOnHover').attr("href"))
+<!--  profile_avatar_view-->
+<!--    $('<img id="CurrentPhotoCheckOnHover" width="40px" height="40px" src="'+$('#CurrentPhotoCheckOnHover').attr("href")+'" />').insertAfter('#CurrentPhotoCheckOnHover');-->
+<!--   $('img#profile_avatar_view').attr('data-toggle','tooltip');-->
+    $('img#profile_avatar_view').attr('class','red-tooltip avatar img-circle');
+     $('img#profile_avatar_view').attr('title',"Click on the camera icon to update profile avatar");
+      $("a#CurrentPhotoCheckOnHover").remove();
+    $('img[data-toggle="tooltip"]').tooltip({
+        animated: 'fade',
+        placement: 'bottom',
+        html: true
+    });
+
+
+
+</script>
+<style>
+
+    input[type="file"] {
+    display: none;
+}
+.id_profile_avatar {
+
+}
+
+#container {
+    position: relative;
+}
+
+#example {
+   position: relative;
+   top: 50px;
+   right: 45px;
+   padding: 0px;
+}
+
+img#profile_avatar_view{
+    -webkit-box-shadow: 1px 3px 10px 8px rgba(0, 0, 0, 0.03);
+    -moz-box-shadow: 1px 3px 10px 8px rgba(0, 0, 0, 0.03);
+    box-shadow: 1px 3px 10px 8px rgba(0, 0, 0, 0.03);
+}
+
+</style>
+{% endblock %}

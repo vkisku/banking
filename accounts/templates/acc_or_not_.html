@@ -1,0 +1,44 @@
+<!--{% extends "login_base.html" %}-->
+<!--{% block title %} Login {% endblock %}-->
+
+{% block main %}
+<style>
+	#formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 90%;
+  position: relative;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  text-align: center;
+}
+</style>
+<div class="row">
+
+	<div class="wrapper fadeInDown">
+		<div id="formContent">
+			<br>
+			<br>
+			{% if data.success %}
+			<p style="color:green">	{{data.success}}</p>
+			<form action="/">
+			<input type="submit" class="fadeIn fourth" value="Log In">
+			</form>
+			{% endif %}
+
+			{% if data.err %}
+			<p style="color:red">	{{data.err}}</p>
+			{% endif %}
+
+			{% if data.confirm_registration %}
+			<p style="color:green">	{{data.confirm_registration}}</p>
+			{% endif %}
+		</div>
+	</div>
+
+</div>
+{% endblock %}
