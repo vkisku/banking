@@ -12,22 +12,74 @@
                           {% csrf_token %}
                           <div class="form-group">
                               <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                              <small>
+                                  {% for error in form.first_name.errors %}
+                                      {% if form.first_name.help_text %}
+                                          <small style="">{{ form.first_name.help_text }}</small>-->
+                                      {% endif %}
+                                  <p style="color: red">{{ error }}</p>
+                                  {% endfor %}
+                              </small>
                               <input type="text" required name="first_name" id="name" placeholder="First Name"/>
                           </div>
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <small>
+                                    {% for error in form.last_name.errors %}
+                                        {% if form.last_name.help_text %}
+                                            <small style="">{{ form.last_name.help_text }}</small>-->
+                                        {% endif %}
+                                    <p style="color: red">{{ error }}</p>
+                                    {% endfor %}
+                                </small>
                                 <input type="text" required name="last_name" id="name" placeholder="Last Name"/>
                             </div>
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <small>
+                                    {% for error in form.username.errors %}
+                                        {% if form.username.help_text %}
+                                            <small style="">{{ form.username.help_text }}</small>-->
+                                        {% endif %}
+                                    <p style="color: red">{{ error }}</p>
+                                    {% endfor %}
+                                </small>
+                                <input type="email" required name="username" id="email" placeholder="Your Email"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <small>
+                                    {% for error in form.email.errors %}
+                                        {% if form.email.help_text %}
+                                            <small style="">{{ form.email.help_text }}</small>-->
+                                        {% endif %}
+                                    <p style="color: red">{{ error }}</p>
+                                    {% endfor %}
+                                </small>
                                 <input type="email" required name="email" id="email" placeholder="Your Email"/>
                             </div>
                             <div class="form-group">
                                 <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <small>
+                                    {% for error in form.password1.errors %}
+                                        {% if form.password1.help_text %}
+                                            <small style="">{{ form.password1.help_text }}</small>-->
+                                        {% endif %}
+                                    <p style="color: red">{{ error }}</p>
+                                    {% endfor %}
+                                </small>
                                 <input type="password" required name="password1" id="pass" placeholder="Password"/>
                             </div>
                             <div class="form-group">
                                 <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <small>
+                                    {% for error in form.password2.errors %}
+                                        {% if form.password2.help_text %}
+                                            <small style="">{{ form.password2.help_text }}</small>-->
+                                        {% endif %}
+                                    <p style="color: red">{{ error }}</p>
+                                    {% endfor %}
+                                </small>
                                 <input type="password" required name="password2" id="re_pass" placeholder="Repeat your password"/>
                             </div>
                             <div class="form-group">
