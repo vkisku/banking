@@ -16,7 +16,7 @@ from django.core.cache import cache
 
 @login_required
 def home(request):
-    return render(request, "home1.html")
+    return HttpResponse("<h1>Home</h1>")
 
 
 def get_client_ip(request):
