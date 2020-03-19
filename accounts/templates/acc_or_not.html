@@ -1,56 +1,38 @@
 {% extends "login_base.html" %}
-{% block title %}Digital Mine | Reset Password{% endblock %}
-
+{% block title %} Banking | Password Reset{% endblock %}
 {% block main %}
+{% load static %}
+        <!-- Sing in  Form -->
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="{% static 'images/signin-image.jpg' %}" alt="sing up image"></figure>
+                    </div>
 
-  <div class="container">
+                    <div class="signin-form">
+                        <h2 class="form-title">Complete Registration!</h2>
+                        {% if data.success %}
+                            <p class="mb-4" style="color:green">
+                                {{data.success}}</p>
 
-    <!-- Outer Row -->
-    <div class="row justify-content-center">
+                                      <form action="/">
+                                        <div class="form-group form-button">
+                                            <input type="submit" name="login" id="login" class="form-submit" value="Sign In"/>
+                                        </div>
 
-      <div class="col-xl-10 col-lg-12 col-md-9">
+                                      </form>
+                          {% endif %}
 
-        <div class="card o-hidden border-0 shadow-lg my-5">
-          <div class="card-body p-0">
-            <!-- Nested Row within Card Body -->
-            <div class="row">
-              <div class="col-lg-6 d-none d-lg-block bg-password-image"></div>
-              <div class="col-lg-6">
-                <div class="p-5">
-                  <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-2">Complete Registration!</h1>
-                      {% if data.success %}
-                          <p class="mb-4" style="color:green">
-                              {{data.success}}</p>
-                                    <form action="/">
-                                        <input type="submit" class="fadeIn fourth" value="Log In">
-                                    </form>
-                        {% endif %}
+                          {% if data.err %}
+                              <p class="mb-4" style="color:red">	{{data.err}}</p>
+                          {% endif %}
 
-                        {% if data.err %}
-                            <p class="mb-4" style="color:red">	{{data.err}}</p>
-                        {% endif %}
-
-                        {% if data.confirm_registration %}
-                            <p class="mb-4" style="color:green">	{{data.confirm_registration}}</p>
-                        {% endif %}
-                  </div>
-                  <hr>
-                  <div class="text-center">
-                    <a class="small" href="{% url 'signup' %}">Create an Account!</a>
-                  </div>
-                  <div class="text-center">
-                    <a class="small" href="{% url 'login' %}">Already have an account? Login!</a>
-                  </div>
+                          {% if data.confirm_registration %}
+                              <p class="mb-4" style="color:green">	{{data.confirm_registration}}</p>
+                          {% endif %}
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-{% endblock %}
+        </section>
+        {% endblock %}
